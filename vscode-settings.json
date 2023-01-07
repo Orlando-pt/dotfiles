@@ -1,0 +1,93 @@
+{
+    "workbench.colorTheme": "Default Dark+",
+    "editor.lineNumbers": "relative",
+    "explorer.confirmDelete": false,
+    "editor.minimap.enabled": false,
+    "editor.cursorSurroundingLines": 12,
+    "java.import.gradle.java.home": "/Library/Java/JavaVirtualMachines/jdk-16.0.2.jdk/Contents/Home",
+    "vim.leader": "<space>",
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [" ", "c", "o"],
+            "after": [],
+            "commands": [
+                { "command": "editor.action.commentLine", "args":[]}
+            ]
+        },
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [" ", "n", "e"],
+            "after": [],
+            "commands": [
+                { "command": "editor.action.marker.next", "args":[]}
+            ]
+        },
+        {
+            "before": [" ", "p", "e"],
+            "after": [],
+            "commands": [
+                { "command": "editor.action.marker.prev", "args":[]}
+            ]
+        },
+        {
+            "before": ["K"],
+            "after": [],
+            "commands": [
+                { "command": "editor.action.showHover", "args":[]}
+            ]
+        },
+        {
+            "before": [" ", "f", "o"],
+            "after": [],
+            "commands": [
+                { "command": "eslint.executeAutofix", "args":[]}
+            ]
+        },
+        {
+            "before": [" ", "f", "f"],
+            "after": [],
+            "commands": [
+                { "command": "editor.action.formatDocument", "args":[]}
+            ]
+        },
+        {
+            "before": [" ", "w", "l"],
+            "after": [],
+            "commands": [
+                { "command": "workbench.action.moveEditorToNextGroup", "args":[]}
+            ]
+        },
+        {
+            "before": [" ", "w", "h"],
+            "after": [],
+            "commands": [
+                { "command": "workbench.action.moveEditorToLeftGroup", "args":[]}
+            ]
+        },
+        {
+            "before": [" ", "c", "o"],
+            "after": [],
+            "commands": [
+                { "command": "editor.action.commentLine", "args":[]}
+            ]
+        },
+        {
+            "before": ["g", "v"],
+            "after": [],
+            "commands": [
+                { "command": "editor.action.revealDefinitionAside", "args":[]}
+            ]
+        }
+    ],
+    "vim.commandLineModeKeyBindings": [],
+    "vim.vimrc.path": "$HOME/.vimrc",
+    "vim.vimrc.enable": true,
+    "grammarly.files.include": [
+        "**/readme.md",
+        "**/README.md",
+        "**/*.txt",
+        "**/*.tex"
+    ],
+    "typescript.updateImportsOnFileMove.enabled": "always"
+}
