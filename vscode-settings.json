@@ -6,15 +6,6 @@
     "editor.cursorSurroundingLines": 12,
     "java.import.gradle.java.home": "/Library/Java/JavaVirtualMachines/jdk-16.0.2.jdk/Contents/Home",
     "vim.leader": "<space>",
-    "vim.visualModeKeyBindingsNonRecursive": [
-        {
-            "before": [" ", "c", "o"],
-            "after": [],
-            "commands": [
-                { "command": "editor.action.commentLine", "args":[]}
-            ]
-        },
-    ],
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [" ", "n", "e"],
@@ -63,13 +54,6 @@
             "after": [],
             "commands": [
                 { "command": "workbench.action.moveEditorToLeftGroup", "args":[]}
-            ]
-        },
-        {
-            "before": [" ", "c", "o"],
-            "after": [],
-            "commands": [
-                { "command": "editor.action.commentLine", "args":[]}
             ]
         },
         {
