@@ -1,1 +1,47 @@
-../.ideavimrc
+set number
+set relativenumber
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set scrolloff=8
+
+let mapleader = " "
+map <C-c> <Esc>
+
+nnoremap <leader>ne :action GotoNextError<CR>
+nnoremap <leader>pe :action GotoPreviousError<CR>
+
+nnoremap <leader>wl :action MoveEditorToOppositeTabGroup<CR>
+nnoremap <leader>wh :action MoveEditorToOppositeTabGroup<CR>
+
+nnoremap <Leader>fo :action ReformatCode<CR>
+
+" comment/uncomment
+nnoremap <C-/> :action CommentByLineComment<CR>
+vnoremap <C-/> :action CommentByLineComment<CR>
+
+" open implementation
+nnoremap gi :action GotoImplementation<CR>
+
+" find usages
+nnoremap <leader>fu :action FindUsages<CR>
+
+" work with tabs
+nnoremap <leader>sr :action SplitVertically<CR>
+nnoremap <leader>sd :action SplitHorizontally<CR>
+nnoremap <leader>l <c-w>l
+nnoremap <leader>h <c-w>h
+nnoremap <leader>k <c-w>k
+nnoremap <leader>j <c-w>j
+nnoremap <leader>th gT
+nnoremap <leader>tl gt
+
+" don't lose selection when indenting
+vnoremap < <gv
+vnoremap > >gv
+vnoremap = =gv
+
+" first paste
+nnoremap <leader>pf "0p
+
