@@ -1,4 +1,4 @@
-alias ssh-add-personal-key='eval $(ssh-agent -s) && ssh-add ~/.ssh/personal-key'
+alias ssh-personal-key='eval $(ssh-agent -s) && ssh-add ~/.ssh/personal-key'
 
 idea() {
   /Applications/IntelliJ\ IDEA.app/Contents/MacOS/idea $1 > /dev/null 2>&1 &

@@ -34,7 +34,7 @@ telescope.setup {
           ["h"] = fb_actions.goto_parent_dir,
           ["/"] = function()
             vim.cmd('startinsert')
-          end
+          end,
         },
       },
     },
@@ -60,7 +60,8 @@ vim.keymap.set('n', '<leader>gf',
 vim.keymap.set('n', '<leader>gl', function()
   builtin.live_grep()
 end)
-vim.keymap.set('n', '<leader>bf', function()
+-- vim.keymap.set('n', '<leader>bf', function()
+vim.keymap.set('n', '<M-p>', function()
   builtin.buffers()
 end)
 vim.keymap.set('n', '<leader>;t', function()
