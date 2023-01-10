@@ -16,7 +16,7 @@ nnoremap("<C-u>", "<C-u>zz")
 -- greatest remap ever
 -- pastes an
 -- xnoremap("<leader>p", "\"_dP")
-nnoremap("<leader>p", "\"0p")
+nnoremap("<leader>pp", "\"0p")
 
 -- next greatest remap ever : asbjornHaland
 -- nnoremap("<leader>y", "\"+y")
@@ -46,10 +46,13 @@ nnoremap("<leader>k", "<C-w>k")
 nnoremap("<leader>l", "<C-w>l")
 
 -- Resize tabs
-nnoremap("<leader>tr", "<C-w>>")
-nnoremap("<leader>tl", "<C-w><")
-nnoremap("<leader>tu", "<C-w>+")
-nnoremap("<leader>td", "<C-w>-")
+nnoremap("<leader>th", ":vertical resize +5<CR>")
+nnoremap("<leader>tl", ":vertical resize -5<CR>")
+nnoremap("<leader>tk", ":resize +5<CR>")
+nnoremap("<leader>tj", ":resize -5<CR>")
+
+-- Reload keybinds
+nnoremap("<leader>rc", ":luafile ~/.config/nvim/lua/urlando/keybinds.lua<CR>")
 
 -- lsp configs
 nnoremap("<leader>ne", ":lua vim.lsp.diagnostic.goto_next()<CR>")

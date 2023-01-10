@@ -14,3 +14,6 @@ nnoremap <leader>l <c-w>l
 nnoremap <leader>th gT
 nnoremap <leader>tl gt
 
+" copy until end
+nnoremap Y yg$
+

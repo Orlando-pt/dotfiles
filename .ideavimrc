@@ -44,3 +44,7 @@ vnoremap = =gv
 
 " first paste
 nnoremap <leader>pf "0p
+
+" copy until end
+nnoremap Y yg$
+
