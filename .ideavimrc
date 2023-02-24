@@ -8,14 +8,30 @@ set scrolloff=8
 
 let mapleader = " "
 map <C-c> <Esc>
+noremap <leader>E $
+noremap <leader>I ^
 
 nnoremap <leader>ne :action GotoNextError<CR>
 nnoremap <leader>pe :action GotoPreviousError<CR>
+nnoremap <leader>e :action ShowErrorDescription<CR>
 
-nnoremap <leader>wl :action MoveEditorToOppositeTabGroup<CR>
-nnoremap <leader>wh :action MoveEditorToOppositeTabGroup<CR>
+nnoremap <leader>wL :action MoveEditorToOppositeTabGroup<CR>
+nnoremap <leader>wH :action MoveEditorToOppositeTabGroup<CR>
+
+" move to method
+nnoremap <leader>nm ]m
+nnoremap <leader>nM ]M
+nnoremap <leader>pm [m
+nnoremap <leader>pM [M
+
+nnoremap <leader>q :q<CR>
+nnoremap <leader>Q :qa<CR>
+nnoremap <leader>W :wa<CR>
 
 nnoremap <Leader>fo :action ReformatCode<CR>
+
+" go to definition and split
+nnoremap gs :action SplitVertically<CR> gd
 
 " comment/uncomment
 nnoremap <C-/> :action CommentByLineComment<CR>
@@ -28,14 +44,14 @@ nnoremap gi :action GotoImplementation<CR>
 nnoremap <leader>fu :action FindUsages<CR>
 
 " work with tabs
-nnoremap <leader>sr :action SplitVertically<CR>
-nnoremap <leader>sd :action SplitHorizontally<CR>
+nnoremap <leader>sv :action SplitVertically<CR>
+nnoremap <leader>sh :action SplitHorizontally<CR>
 nnoremap <leader>l <c-w>l
 nnoremap <leader>h <c-w>h
 nnoremap <leader>k <c-w>k
 nnoremap <leader>j <c-w>j
-nnoremap <leader>th gT
-nnoremap <leader>tl gt
+nnoremap <leader>wh gT
+nnoremap <leader>wl gt
 
 " don't lose selection when indenting
 vnoremap < <gv

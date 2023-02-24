@@ -58,11 +58,17 @@ return require('packer').startup({
     use 'nvim-telescope/telescope.nvim'
     use 'nvim-telescope/telescope-file-browser.nvim'
 
+    -- harpoon
+    use 'ThePrimeagen/harpoon'
+
     -- wakatime
     use 'wakatime/vim-wakatime'
 
     -- copilot
     use 'github/copilot.vim'
+
+    -- bufferline
+    use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
 
   end,
   config = {

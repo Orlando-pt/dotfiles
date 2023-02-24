@@ -12,8 +12,11 @@ local fb_actions = require "telescope".extensions.file_browser.actions
 telescope.setup {
   defaults = {
     mappings = {
+      i = {
+        ["<C-c>"] = actions.close
+      },
       n = {
-        ["q"] = actions.close
+        ["<C-c>"] = actions.close
       },
     },
     file_ignore_patterns = { "node_modules" }
@@ -31,7 +34,11 @@ telescope.setup {
         ["n"] = {
           -- your custom normal mode mappings
           ["N"] = fb_actions.create,
+          ["R"] = fb_actions.rename,
+          ["Y"] = fb_actions.copy,
+          ["D"] = fb_actions.remove,
           ["h"] = fb_actions.goto_parent_dir,
+          ["H"] = fb_actions.goto_cwd,
           ["/"] = function()
             vim.cmd('startinsert')
           end,

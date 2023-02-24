@@ -73,5 +73,6 @@
         "**/*.txt",
         "**/*.tex"
     ],
-    "typescript.updateImportsOnFileMove.enabled": "always"
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "window.zoomLevel": 1
 }

@@ -1,8 +1,8 @@
 local Remap = require("urlando.keymap")
 local vnoremap = Remap.vnoremap
 local nnoremap = Remap.nnoremap
-local xnoremap = Remap.xnoremap
 local inoremap = Remap.inoremap
+local noremap = Remap.nmap
 
 vnoremap("J", ":m '>+1<CR>gv=gv")
 vnoremap("K", ":m '<-2<CR>gv=gv")
@@ -17,6 +17,17 @@ nnoremap("<C-u>", "<C-u>zz")
 -- pastes an
 -- xnoremap("<leader>p", "\"_dP")
 nnoremap("<leader>pp", "\"0p")
+inoremap("<Esc><BS>", "<C-w>")
+
+-- Close tab
+noremap("<leader>q", ":q<CR>")
+nnoremap("<leader>Q", ":qa<CR>")
+nnoremap("<leader>W", ":wa<CR>")
+noremap("<leader>E", "$")
+noremap("<leader>I", "^")
+
+-- Close last buffer
+nnoremap("<leader>d", ":b# | :bd#<CR>")
 
 -- next greatest remap ever : asbjornHaland
 -- nnoremap("<leader>y", "\"+y")
@@ -55,9 +66,12 @@ nnoremap("<leader>tj", ":resize -5<CR>")
 nnoremap("<leader>rc", ":luafile ~/.config/nvim/lua/urlando/keybinds.lua<CR>")
 
 -- lsp configs
-nnoremap("<leader>ne", ":lua vim.lsp.diagnostic.goto_next()<CR>")
-nnoremap("<leader>pe", ":lua vim.lsp.diagnostic.goto_prev()<CR>")
+nnoremap("<leader>ne", ":lua vim.diagnostic.goto_next()<CR>")
+nnoremap("<leader>pe", ":lua vim.diagnostic.goto_prev()<CR>")
 nnoremap("gv", ":vsplit | lua vim.lsp.buf.definition()<CR>")
 
 -- format document
 nnoremap("<leader>fo", ":lua vim.lsp.buf.format()<CR>")
+
+-- Telescope diagnostic
+nnoremap("<leader>ed", ":Telescope diagnostics<CR>")
