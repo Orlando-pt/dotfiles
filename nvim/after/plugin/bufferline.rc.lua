@@ -31,3 +31,7 @@ end)
 vim.keymap.set("n", "<leader>wh", function()
   bufferline.cycle(-1)
 end)
+
+vim.keymap.set("n", "<leader>wd", function()
+  bufferline.close_in_direction("right")
+end)
