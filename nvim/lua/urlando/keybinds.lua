@@ -13,10 +13,12 @@ nnoremap("N", "Nzzzv")
 nnoremap("<C-d>", "<C-d>zz")
 nnoremap("<C-u>", "<C-u>zz")
 
--- greatest remap ever
--- pastes an
--- xnoremap("<leader>p", "\"_dP")
-nnoremap("<leader>pp", "\"0p")
+
+-- Do not loose selection when indenting
+vnoremap("<", "<gv")
+vnoremap(">", ">gv")
+
+nnoremap("<leader>pf", "\"0p")
 inoremap("<Esc><BS>", "<C-w>")
 
 -- Close tab
@@ -47,7 +49,7 @@ nnoremap("+", "<C-a>")
 nnoremap("-", "<C-x>")
 
 -- Manage tabs
-nnoremap("<leader>sv", "<C-w>v")
+nnoremap("<leader>su", "<C-w>v")
 nnoremap("<leader>sh", ":split<Return>")
 
 -- Move tabs
@@ -68,7 +70,8 @@ nnoremap("<leader>rc", ":luafile ~/.config/nvim/lua/urlando/keybinds.lua<CR>")
 -- lsp configs
 nnoremap("<leader>ne", ":lua vim.diagnostic.goto_next()<CR>")
 nnoremap("<leader>pe", ":lua vim.diagnostic.goto_prev()<CR>")
-nnoremap("gv", ":vsplit | lua vim.lsp.buf.definition()<CR>")
+nnoremap("gs", ":vsplit | lua vim.lsp.buf.definition()<CR>")
+nnoremap("gS", ":split | lua vim.lsp.buf.definition()<CR>")
 
 -- format document
 nnoremap("<leader>fo", ":lua vim.lsp.buf.format()<CR>")

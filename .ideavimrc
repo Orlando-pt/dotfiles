@@ -32,16 +32,17 @@ nnoremap <Leader>fo :action ReformatCode<CR>
 
 " go to definition and split
 nnoremap gs :action SplitVertically<CR> gd
+nnoremap gS :action SplitHorizontally<CR> gd
 
 " comment/uncomment
-nnoremap <C-/> :action CommentByLineComment<CR>
-vnoremap <C-/> :action CommentByLineComment<CR>
+nnoremap <leader>co :action CommentByLineComment<CR>
+vnoremap <leader>co :action CommentByLineComment<CR>
 
 " open implementation
 nnoremap gi :action GotoImplementation<CR>
 
 " find usages
-nnoremap <leader>fu :action FindUsages<CR>
+nnoremap gu :action FindUsages<CR>
 
 " work with tabs
 nnoremap <leader>sv :action SplitVertically<CR>

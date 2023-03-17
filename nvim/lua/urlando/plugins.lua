@@ -43,10 +43,10 @@ return require('packer').startup({
       config = function()
         require('Comment').setup({
           toggler = {
-            line = '<C-/>'
+            line = '<leader>co'
           },
           opleader = {
-            line = '<C-/>'
+            line = '<leader>co'
           }
         })
       end
