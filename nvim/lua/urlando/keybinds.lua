@@ -21,6 +21,8 @@ vnoremap(">", ">gv")
 nnoremap("<leader>pf", "\"0p")
 inoremap("<Esc><BS>", "<C-w>")
 
+inoremap("<Esc><BS>", "<C-w>")
+
 -- Close tab
 noremap("<leader>q", ":q<CR>")
 nnoremap("<leader>Q", ":qa<CR>")

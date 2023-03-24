@@ -57,10 +57,17 @@
             ]
         },
         {
-            "before": ["g", "v"],
+            "before": ["g", "s"],
             "after": [],
             "commands": [
                 { "command": "editor.action.revealDefinitionAside", "args":[]}
+            ]
+        },
+        {
+            "before": [" ", "c", "o"],
+            "after": [],
+            "commands": [
+                { "command": "editor.action.commentLine", "args":[]}
             ]
         }
     ],
@@ -74,5 +81,6 @@
         "**/*.tex"
     ],
     "typescript.updateImportsOnFileMove.enabled": "always",
-    "window.zoomLevel": 1
+    "window.zoomLevel": 1,
+    "editor.inlineSuggest.enabled": true
 }

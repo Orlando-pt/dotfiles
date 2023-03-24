@@ -45,7 +45,7 @@ nnoremap gi :action GotoImplementation<CR>
 nnoremap gu :action FindUsages<CR>
 
 " work with tabs
-nnoremap <leader>sv :action SplitVertically<CR>
+nnoremap <leader>su :action SplitVertically<CR>
 nnoremap <leader>sh :action SplitHorizontally<CR>
 nnoremap <leader>l <c-w>l
 nnoremap <leader>h <c-w>h
