@@ -43,14 +43,14 @@
             ]
         },
         {
-            "before": [" ", "w", "l"],
+            "before": [" ", "w", "L"],
             "after": [],
             "commands": [
                 { "command": "workbench.action.moveEditorToNextGroup", "args":[]}
             ]
         },
         {
-            "before": [" ", "w", "h"],
+            "before": [" ", "w", "H"],
             "after": [],
             "commands": [
                 { "command": "workbench.action.moveEditorToLeftGroup", "args":[]}
@@ -82,5 +82,8 @@
     ],
     "typescript.updateImportsOnFileMove.enabled": "always",
     "window.zoomLevel": 1,
-    "editor.inlineSuggest.enabled": true
+    "editor.inlineSuggest.enabled": true,
+    "files.hotExit": "off",
+    "terminal.integrated.showExitAlert": true,
+    "terminal.integrated.confirmOnExit": "always"
 }
