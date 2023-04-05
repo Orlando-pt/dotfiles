@@ -29,14 +29,14 @@
             ]
         },
         {
-            "before": [" ", "f", "o"],
+            "before": [" ", "f", "l"],
             "after": [],
             "commands": [
                 { "command": "eslint.executeAutofix", "args":[]}
             ]
         },
         {
-            "before": [" ", "f", "f"],
+            "before": [" ", "f", "o"],
             "after": [],
             "commands": [
                 { "command": "editor.action.formatDocument", "args":[]}
@@ -69,6 +69,20 @@
             "commands": [
                 { "command": "editor.action.commentLine", "args":[]}
             ]
+        },
+        {
+            "before": ["g", "u"],
+            "after": [],
+            "commands": [
+                { "command": "editor.action.goToReferences", "args":[]}
+            ]
+        },
+        {
+            "before": [" ", "f", "f"],
+            "after": [],
+            "commands": [
+                { "command": "workbench.action.quickOpen", "args":[]}
+            ]
         }
     ],
     "vim.commandLineModeKeyBindings": [],
@@ -85,5 +99,8 @@
     "editor.inlineSuggest.enabled": true,
     "files.hotExit": "off",
     "terminal.integrated.showExitAlert": true,
-    "terminal.integrated.confirmOnExit": "always"
+    "terminal.integrated.confirmOnExit": "always",
+    "[python]": {
+        "editor.formatOnType": true
+    }
 }

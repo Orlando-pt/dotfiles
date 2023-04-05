@@ -13,14 +13,20 @@ alias gir='git restore'
 alias gif='git fetch'
 alias gich='git checkout'
 alias gib='git branch'
+alias gil='git log'
+alias gim='git merge'
 
 idea() {
   /Applications/IntelliJ\ IDEA.app/Contents/MacOS/idea $1 > /dev/null 2>&1 &
 }
 
+# tmux
 new-vim-tmux() {
   tmux new "nvim $1"
+}
 
+tnew() {
+  tmux new
 }
 
 # git branch delete with pattern
