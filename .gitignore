@@ -6,3 +6,21 @@ htop
 iterm2
 jgit
 
+# linux stuff
+.gsd-keyboard.settings-ported
+GNOME-xdg-terminals.list
+dconf/
+dleyna-renderer-service.conf
+evolution/
+gnome-control-center/
+gnome-initial-setup-done
+gtk-3.0/
+ibus/
+monitors.xml
+monitors.xml~
+pulse/
+user-dirs.dirs
+user-dirs.locale
+xdg-terminals.list
+
+**/packer_compiled.lua

@@ -1,6 +1,8 @@
 alias ssh-personal-key='eval $(ssh-agent -s) && ssh-add ~/.ssh/personal-key'
 alias v='nvim'
 
+alias copy='xsel -ib'
+
 export GIT_EDITOR=nvim
 
 alias gia='git add'
@@ -33,3 +35,6 @@ tnew() {
 gibd() {
   git branch | grep $1 | xargs git branch -$2
 }
+
+# add go bin to path
+export PATH="$PATH:$HOME/go/bin/"
