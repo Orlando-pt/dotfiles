@@ -42,6 +42,10 @@ nvim_lsp.gopls.setup {
   cmd = { "gopls", "serve" },
 }
 
+nvim_lsp.jdtls.setup{
+  on_attach = on_attach,
+}
+
 
 nvim_lsp.pylsp.setup {
   on_attach = on_attach,
