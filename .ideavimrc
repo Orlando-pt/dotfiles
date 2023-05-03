@@ -1,3 +1,6 @@
+" set nerdtree plugin
+set NERDTree
+
 set number
 set relativenumber
 set tabstop=4 softtabstop=4
@@ -13,7 +16,7 @@ noremap <leader>I ^
 
 nnoremap <leader>ne :action GotoNextError<CR>
 nnoremap <leader>pe :action GotoPreviousError<CR>
-nnoremap <leader>e :action ShowErrorDescription<CR>
+nnoremap <leader>ee :action ShowErrorDescription<CR>
 
 nnoremap <leader>wL :action MoveEditorToOppositeTabGroup<CR>
 nnoremap <leader>wH :action MoveEditorToOppositeTabGroup<CR>
@@ -64,4 +67,11 @@ nnoremap <leader>pf "0p
 
 " copy until end
 nnoremap Y yg$
+
+nnoremap <leader>ep :NERDTree<CR>
+
+nnoremap <C-n> :action NewFile<CR>
+
+nnoremap <leader>r :action RenameElement<CR>
+nmap <C-p> :action GotoFile<CR>
 
