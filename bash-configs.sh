@@ -2,19 +2,6 @@ alias ssh-personal-key='eval $(ssh-agent -s) && ssh-add ~/.ssh/personal-key'
 
 alias ll='ls -la'
 
-alias gad='git add'
-alias gco='git commit -m'
-alias gpu='git push'
-alias gst='git status'
-alias gpl='git pull'
-alias gdi='git diff'
-alias gre='git restore'
-alias gfe='git fetch'
-alias gch='git checkout'
-alias gbr='git branch'
-alias glo='git log'
-alias gme='git merge'
-
 # git branch delete with pattern
 gbdel() {
   git branch | grep $1 | xargs git branch -$2
@@ -25,6 +12,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   echo "macOS detected"
   # add go bin to path
   export PATH="$PATH:$HOME/go/bin/"
+  export PATH="$PATH:/opt/homebrew/bin"
 
   # tmux
   new-vim-tmux() {
