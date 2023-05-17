@@ -19,7 +19,8 @@ return require('packer').startup({
       requires = { 'tjdevries/colorbuddy.nvim' }
     }
 
-    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
+    use { 'nvim-telescope/telescope-fzf-native.nvim',
+      run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 
     use {
       'nvim-lualine/lualine.nvim',
@@ -71,6 +72,17 @@ return require('packer').startup({
 
     -- bufferline
     use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
+
+    -- maintain sessions
+    use {
+      'rmagatti/auto-session',
+      config = function()
+        require("auto-session").setup {
+          log_level = "error",
+          auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
+        }
+      end
+    }
 
   end,
   config = {

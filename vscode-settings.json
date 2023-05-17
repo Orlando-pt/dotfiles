@@ -1,6 +1,6 @@
 {
-    "workbench.colorTheme": "Default Dark+",
     "editor.lineNumbers": "relative",
+    "workbench.colorTheme": "Default Dark Modern",
     "explorer.confirmDelete": false,
     "editor.minimap.enabled": false,
     "editor.cursorSurroundingLines": 12,
