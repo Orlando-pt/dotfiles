@@ -46,10 +46,10 @@ return require('packer').startup({
       config = function()
         require('Comment').setup({
           toggler = {
-            line = '<leader>co'
+            line = '<space>co'
           },
           opleader = {
-            line = '<leader>co'
+            line = '<space>co'
           }
         })
       end
@@ -60,9 +60,6 @@ return require('packer').startup({
     use 'nvim-lua/plenary.nvim'
     use 'nvim-telescope/telescope.nvim'
     use 'nvim-telescope/telescope-file-browser.nvim'
-
-    -- harpoon
-    use 'ThePrimeagen/harpoon'
 
     -- wakatime
     use 'wakatime/vim-wakatime'

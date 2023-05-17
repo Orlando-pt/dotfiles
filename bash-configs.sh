@@ -10,9 +10,16 @@ gbdel() {
 # only do this steps on macOS
 if [[ "$OSTYPE" == "darwin"* ]]; then
   echo "macOS detected"
-  # add go bin to path
-  export PATH="$PATH:$HOME/go/bin/"
+
+  export GOPATH=$HOME/go
+  export GOROOT="/opt/homebrew/opt/go/libexec"
+  export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin" # add go bin to path
+
   export PATH="$PATH:/opt/homebrew/bin"
+  export PATH="$PATH:$HOME/Library/Python/3.9/bin"
+
+  export PATH="$HOME/.jenv/bin:$PATH"
+  eval "$(jenv init -)"
 
   # tmux
   new-vim-tmux() {
