@@ -8,11 +8,15 @@
     <keyboard-shortcut first-keystroke="escape" />
     <keyboard-shortcut first-keystroke="meta k" />
   </action>
+  <action id="ExportToTextFile">
+    <keyboard-shortcut first-keystroke="shift ctrl o" />
+  </action>
   <action id="FileChooser.GotoModule" />
   <action id="FocusEditor">
     <keyboard-shortcut first-keystroke="escape" />
     <keyboard-shortcut first-keystroke="meta k" />
   </action>
+  <action id="ForceOthersToFollowAction" />
   <action id="GoToLastTab">
     <keyboard-shortcut first-keystroke="meta 9" />
   </action>
@@ -28,6 +32,12 @@
   <action id="GoToTab4">
     <keyboard-shortcut first-keystroke="meta 4" />
   </action>
+  <action id="GotoFile">
+    <keyboard-shortcut first-keystroke="ctrl o" />
+  </action>
+  <action id="OverrideMethods">
+    <keyboard-shortcut first-keystroke="shift ctrl o" />
+  </action>
   <action id="ParameterInfo" />
   <action id="Switcher">
     <keyboard-shortcut first-keystroke="meta p" />
@@ -35,4 +45,8 @@
   <action id="SwitcherBackward">
     <keyboard-shortcut first-keystroke="shift meta p" />
   </action>
+  <action id="UsageGrouping.FlattenModules">
+    <keyboard-shortcut first-keystroke="shift ctrl o" />
+  </action>
+  <action id="copilot.disposeInlays" />
 </keymap>

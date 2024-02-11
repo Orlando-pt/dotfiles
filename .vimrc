@@ -26,3 +26,5 @@ nnoremap Y yg$
 
 " first paste
 nnoremap <leader>pf "0p
+
+nnoremap <leader>q :q<CR>

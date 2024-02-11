@@ -1,8 +1,6 @@
 local status, nvim_lsp = pcall(require, "lspconfig")
 if (not status) then return end
 
-local protocol = require('vim.lsp.protocol')
-
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
@@ -32,7 +30,7 @@ end
 
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
-  filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+  filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
   cmd = { "typescript-language-server", "--stdio" },
   --    capabilities = capabilities
 }
@@ -42,9 +40,10 @@ nvim_lsp.gopls.setup {
   cmd = { "gopls", "serve" },
 }
 
---nvim_lsp.jdtls.setup{
+-- require('java').setup()
+-- nvim_lsp.jdtls.setup{
 --  on_attach = on_attach,
---}
+-- }
 
 nvim_lsp.pylsp.setup {
   on_attach = on_attach,

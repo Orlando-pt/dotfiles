@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/opt/homebrew/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -70,12 +70,14 @@ ZSH_THEME="amuse"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+
 plugins=(
   git
   zsh-autosuggestions
   copypath
   copyfile
   Copybuffer
+  tmux
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -109,3 +111,10 @@ source $ZSH/oh-my-zsh.sh
 source ~/.config/bash-configs.sh
 
 bindkey '^ ' autosuggest-accept
+
+# export PATH="$HOME/.jenv/bin:$PATH"
+export JAVA_HOME="/Users/orlandomacedo/Library/Java/JavaVirtualMachines/openjdk-21.0.1/Contents/Home"
+eval "$(jenv init -)"
+
+eval "$(jump shell)"
+

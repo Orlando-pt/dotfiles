@@ -3,6 +3,7 @@ local vnoremap = Remap.vnoremap
 local nnoremap = Remap.nnoremap
 local inoremap = Remap.inoremap
 local noremap = Remap.nmap
+local xnoremap = Remap.xnoremap
 
 vnoremap("J", ":m '>+1<CR>gv=gv")
 vnoremap("K", ":m '<-2<CR>gv=gv")
@@ -18,20 +19,18 @@ nnoremap("<C-u>", "<C-u>zz")
 vnoremap("<", "<gv")
 vnoremap(">", ">gv")
 
-nnoremap("<leader>pf", "\"0p")
-inoremap("<Esc><BS>", "<C-w>")
-
 inoremap("<Esc><BS>", "<C-w>")
 
 -- Close tab
-noremap("<leader>q", ":q<CR>")
 nnoremap("<leader>Q", ":qa<CR>")
 nnoremap("<leader>W", ":wa<CR>")
+
+-- Move to start/end of line
 noremap("<leader>E", "$")
 noremap("<leader>I", "^")
 
 -- Close last buffer
-nnoremap("<leader>d", ":b# | :bd#<CR>")
+nnoremap("<leader>q", ":b# | :bd#<CR>")
 
 -- next greatest remap ever : asbjornHaland
 -- nnoremap("<leader>y", "\"+y")
@@ -72,6 +71,7 @@ nnoremap("<leader>rc", ":luafile ~/.config/nvim/lua/urlando/keybinds.lua<CR>")
 -- lsp configs
 nnoremap("<leader>ne", ":lua vim.diagnostic.goto_next()<CR>")
 nnoremap("<leader>pe", ":lua vim.diagnostic.goto_prev()<CR>")
+nnoremap("<leader>ee", ":lua vim.diagnostic.open_float()<CR>")
 nnoremap("gs", ":vsplit | lua vim.lsp.buf.definition()<CR>")
 nnoremap("gS", ":split | lua vim.lsp.buf.definition()<CR>")
 
@@ -80,3 +80,7 @@ nnoremap("<leader>fo", ":lua vim.lsp.buf.format()<CR>")
 
 -- Telescope diagnostic
 nnoremap("<leader>ed", ":Telescope diagnostics<CR>")
+
+-- now it is possible to paste many times over selected text
+xnoremap("<leader>pp", "\"_dP")
+

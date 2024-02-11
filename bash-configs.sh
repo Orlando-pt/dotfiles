@@ -26,10 +26,6 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     tmux new "nvim $1"
   }
 
-  tnew() {
-    tmux new
-  }
-
   idea() {
     /Applications/IntelliJ\ IDEA.app/Contents/MacOS/idea $1 > /dev/null 2>&1 &
   }
