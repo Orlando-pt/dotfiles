@@ -40,3 +40,5 @@ if [[ "$OSTYPE" == "Windows_NT"* ]]; then
 
   export GIT_EDITOR=vim
 fi
+
+ln -sfnv $HOME/.config/bin/tmux-session $HOME/bin/tmux-session
