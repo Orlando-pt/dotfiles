@@ -34,11 +34,4 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   export GIT_EDITOR=nvim
 fi
 
-# only do this steps on windows ughhhh
-if [[ "$OSTYPE" == "Windows_NT"* ]]; then
-  echo "Windows detected"
 
-  export GIT_EDITOR=vim
-fi
-
-ln -sfnv $HOME/.config/bin/tmux-session $HOME/bin/tmux-session

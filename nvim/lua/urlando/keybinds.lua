@@ -60,10 +60,10 @@ nnoremap("<leader>k", "<C-w>k")
 nnoremap("<leader>l", "<C-w>l")
 
 -- Resize tabs
-nnoremap("<leader>th", ":vertical resize +5<CR>")
-nnoremap("<leader>tl", ":vertical resize -5<CR>")
-nnoremap("<leader>tk", ":resize +5<CR>")
-nnoremap("<leader>tj", ":resize -5<CR>")
+nnoremap("<C-H>", ":vertical resize +5<CR>")
+nnoremap("<C-L>", ":vertical resize -5<CR>")
+nnoremap("<C-K>", ":resize +5<CR>")
+nnoremap("<C-J>", ":resize -5<CR>")
 
 -- Reload keybinds
 nnoremap("<leader>rc", ":luafile ~/.config/nvim/lua/urlando/keybinds.lua<CR>")
