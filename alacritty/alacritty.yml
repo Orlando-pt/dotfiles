@@ -369,7 +369,7 @@ font:
 
 cursor:
   # Cursor style
-  # style:
+  style:
     # Cursor shape
     #
     # Values for `shape`:
