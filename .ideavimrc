@@ -78,3 +78,5 @@ nnoremap <C-n> :action NewFile<CR>
 nnoremap <leader>r :action RenameElement<CR>
 nmap <C-p> :action GotoFile<CR>
 
+nnoremap + <c-a>
+nnoremap - <c-x>

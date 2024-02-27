@@ -112,9 +112,13 @@ source ~/.config/bash-configs.sh
 
 bindkey '^ ' autosuggest-accept
 
-# export PATH="$HOME/.jenv/bin:$PATH"
-export JAVA_HOME="/Users/orlandomacedo/Library/Java/JavaVirtualMachines/openjdk-21.0.1/Contents/Home"
+export PATH="$HOME/.jenv/bin:$PATH"
+#export JAVA_HOME="/Users/orlandomacedo/Library/Java/JavaVirtualMachines/openjdk-21.0.1/Contents/Home"
 eval "$(jenv init -)"
 
 eval "$(jump shell)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
