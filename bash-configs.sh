@@ -4,7 +4,10 @@ alias ll='ls -la'
 
 # git branch delete with pattern
 gbdel() {
-  git branch | grep $1 | xargs git branch -$2
+  git branch | grep $1 | xargs git branch -d
+}
+gbdelf() {
+  git branch | grep $1 | xargs git branch -D
 }
 
 gcmsgb() {

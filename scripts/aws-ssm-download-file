@@ -1,0 +1,50 @@
+#!/usr/bin/expect
+
+# Set the script to not time out
+set timeout -1
+
+set port 1234
+set file_to_download [lindex $argv 0]
+set remote_instance_id [lindex $argv 1]
+
+# Start AWS SSM session on host A and run netcat to listen on a port
+spawn aws ssm start-session --target $remote_instance_id --profile dev
+expect {
+    -re "sh-.*" {
+        send_user "\nAWS SSM session started.\n"
+        send "cd && nc -l -p $port < \"$file_to_download\"\r"
+        send_user "\nNetcat listener started on port $port < $file_to_download.\n"
+    }
+}
+
+# Start a background AWS SSM session for port forwarding
+spawn bash -c "aws ssm start-session --target $remote_instance_id --profile dev --document-name AWS-StartPortForwardingSession --parameters '{\"portNumber\":\[\"$port\"\],\"localPortNumber\":\[\"$port\"\]}'"
+expect {
+    -re "Waiting for connections" {
+        send_user "\nPort forwarding session established.\n"
+    }
+}
+
+# Use netcat to receive the file to the port
+spawn bash -c "nc -w 3 localhost $port > \"$file_to_download\""
+expect {
+    eof {
+        send_user "\nFile received.\n"
+    }
+}
+
+# Terminate the netcat listener on the remote host
+spawn aws ssm start-session --target $remote_instance_id --profile dev
+expect {
+    -re "sh-.*" {
+        send_user "\nTerminating netcat listener on remote host.\n"
+        send "pkill -f 'nc -l -p $port'\r"
+    }
+}
+
+# Terminate all AWS SSM sessions
+send_user "\nClosing all sessions...\n"
+exec pkill -f "aws ssm"
+send_user "\nAll sessions terminated.\n"
+
+exit

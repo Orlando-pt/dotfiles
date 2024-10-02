@@ -66,10 +66,11 @@ vnoremap > >gv
 vnoremap = =gv
 
 " first paste
-nnoremap <leader>pf "0p
+noremap <leader>pf \"0p
 
 " copy until end
 nnoremap Y yg$
+vnoremap <leader>y y']
 
 nnoremap <leader>ep :NERDTree<CR>
 

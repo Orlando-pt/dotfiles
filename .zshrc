@@ -122,3 +122,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
+alias package-swap="/Users/orlandomacedo/tda.ios.build-tools/package-swap.sh"
+alias generate-xcframeworks="/Users/orlandomacedo/tda.ios.build-tools/generate-xcframeworks.sh"
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
