@@ -16,6 +16,15 @@ return require('packer').startup({
     use 'kyazdani42/nvim-web-devicons'
     use {
       'svrana/neosolarized.nvim',
+      lazy = false,
+      priority = 1000,
+      config = function()
+        require("neosolarized").setup({
+          comment_italics = true,
+          background_set = false,
+        })
+        vim.cmd.colorscheme("neosolarized")
+      end,
       requires = { 'tjdevries/colorbuddy.nvim' }
     }
 
@@ -29,10 +38,10 @@ return require('packer').startup({
 
     -- lsp configs
     use 'L3MON4D3/LuaSnip'
-    use('onsails/lspkind.nvim') -- vscode like pictograms
-    use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
-    use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
-    use 'hrsh7th/nvim-cmp' -- Completion
+    use('onsails/lspkind.nvim')  -- vscode like pictograms
+    use 'hrsh7th/cmp-buffer'     -- nvim-cmp source for buffer words
+    use 'hrsh7th/cmp-nvim-lsp'   -- nvim-cmp source for neovim's built-in LSP
+    use 'hrsh7th/nvim-cmp'       -- Completion
     use('neovim/nvim-lspconfig') -- Configurations for Nvim LSP
 
     use {
@@ -75,12 +84,10 @@ return require('packer').startup({
       'rmagatti/auto-session',
       config = function()
         require("auto-session").setup {
-          log_level = "error",
-          auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
+          suppressed_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
         }
       end
     }
-
   end,
   config = {
     display = {

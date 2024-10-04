@@ -45,3 +45,4 @@ vim.opt.wildignore:append { '*/node_modules/*' }
 
 -- copilot
 vim.g.copilot_assume_mapped = true
+
