@@ -1,10 +1,10 @@
 {
     "editor.lineNumbers": "relative",
+    "editor.rulers": [90],
     "workbench.colorTheme": "Default Dark Modern",
     "explorer.confirmDelete": false,
     "editor.minimap.enabled": false,
     "editor.cursorSurroundingLines": 12,
-    "java.import.gradle.java.home": "/Library/Java/JavaVirtualMachines/jdk-16.0.2.jdk/Contents/Home",
     "vim.leader": "<space>",
     "vim.normalModeKeyBindingsNonRecursive": [
         {
@@ -83,24 +83,31 @@
             "commands": [
                 { "command": "workbench.action.quickOpen", "args":[]}
             ]
+        },
+        {
+            "before": [" ", "e", "p"],
+            "after": [],
+            "commands": [
+                { "command": "workbench.action.toggleSidebarVisibility", "args":[]}
+            ]
+        },
+        {
+            "before": [" ", "r"],
+            "after": [],
+            "commands": [
+                { "command": "editor.action.rename", "args":[]}
+            ]
         }
     ],
     "vim.commandLineModeKeyBindings": [],
     "vim.vimrc.path": "$HOME/.vimrc",
     "vim.vimrc.enable": true,
-    "grammarly.files.include": [
-        "**/readme.md",
-        "**/README.md",
-        "**/*.txt",
-        "**/*.tex"
-    ],
+    "vim.foldfix": true,
     "typescript.updateImportsOnFileMove.enabled": "always",
-    "window.zoomLevel": 1,
     "editor.inlineSuggest.enabled": true,
     "files.hotExit": "off",
     "terminal.integrated.showExitAlert": true,
     "terminal.integrated.confirmOnExit": "always",
-    "[python]": {
-        "editor.formatOnType": true
-    }
+    "redhat.telemetry.enabled": true,
+    "yaml.format.singleQuote": true
 }

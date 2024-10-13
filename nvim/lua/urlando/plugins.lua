@@ -49,6 +49,8 @@ return require('packer').startup({
       run = ':TSUpdate'
     }
 
+    use 'nvim-treesitter/nvim-treesitter-context'
+
     use 'windwp/nvim-autopairs'
     use {
       'numToStr/Comment.nvim',

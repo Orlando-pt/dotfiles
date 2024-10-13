@@ -77,6 +77,13 @@ nvim_lsp.lua_ls.setup {
   },
 }
 
+--Enable (broadcasting) snippet capability for completion
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+nvim_lsp.jsonls.setup {
+  capabilities = capabilities,
+}
+
 -- Diagnostic symbols in the sign column (gutter)
 local signs = { Error = " ", Warn = " ", Hint = "󰈈 ", Info = " " }
 for type, icon in pairs(signs) do

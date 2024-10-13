@@ -46,3 +46,4 @@ vim.opt.wildignore:append { '*/node_modules/*' }
 -- copilot
 vim.g.copilot_assume_mapped = true
 
+vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
