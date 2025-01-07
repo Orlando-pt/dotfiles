@@ -12,7 +12,7 @@ spawn aws ssm start-session --target $remote_instance_id --profile dev
 expect {
     -re "sh-.*" {
         send_user "\nAWS SSM session started.\n"
-        send "cd && nc -l -p $port < \"$file_to_download\"\r"
+        send "cd ~/flights/options && nc -l -p $port < \"$file_to_download\"\r"
         send_user "\nNetcat listener started on port $port < $file_to_download.\n"
     }
 }

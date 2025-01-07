@@ -47,3 +47,10 @@ vim.opt.wildignore:append { '*/node_modules/*' }
 vim.g.copilot_assume_mapped = true
 
 vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+
+-- set autoread
+vim.cmd("set autoread")
+vim.cmd("au FocusGained,BufEnter * :checktime")
+
+
+
