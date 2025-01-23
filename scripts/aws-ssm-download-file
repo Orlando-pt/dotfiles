@@ -4,15 +4,16 @@
 set timeout -1
 
 set port 1234
-set file_to_download [lindex $argv 0]
-set remote_instance_id [lindex $argv 1]
+set file_path [lindex $argv 0]
+set file_to_download [lindex $argv 1]
+set remote_instance_id [lindex $argv 2]
 
 # Start AWS SSM session on host A and run netcat to listen on a port
 spawn aws ssm start-session --target $remote_instance_id --profile dev
 expect {
     -re "sh-.*" {
         send_user "\nAWS SSM session started.\n"
-        send "cd ~/flights/options && nc -l -p $port < \"$file_to_download\"\r"
+        send "cd ~/$file_path && nc -l -p $port < \"$file_to_download\"\r"
         send_user "\nNetcat listener started on port $port < $file_to_download.\n"
     }
 }
