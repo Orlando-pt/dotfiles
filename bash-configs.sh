@@ -72,4 +72,6 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   export GIT_EDITOR=nvim
 fi
 
+# increase specs version
+alias inc-specs='./mvnw org.codehaus.mojo:build-helper-maven-plugin:3.4.0:parse-version versions:set -DnewVersion=\${parsedVersion.majorVersion}.\${parsedVersion.minorVersion}.\${parsedVersion.nextIncrementalVersion} -DgenerateBackupPoms=false -q'
 
