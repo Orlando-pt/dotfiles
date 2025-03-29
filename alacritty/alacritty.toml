@@ -1,3 +1,4 @@
+import = ["/home/orlando/.config/alacritty/dracula.toml"]
 
 [cursor.style]
 blinking = "Always"
@@ -410,5 +411,3 @@ dynamic_padding = true
 dynamic_title = true
 startup_mode = "Fullscreen"
 
-[general]
-import = ["/Users/orlandomacedo/.config/alacritty/dracula.toml"]

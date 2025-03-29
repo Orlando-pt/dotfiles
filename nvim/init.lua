@@ -4,4 +4,3 @@ require("urlando.keybinds")
 require("urlando.plugins")
 
 require("macos")
-
