@@ -1,4 +1,4 @@
-<keymap version="1" name="macOS keymap" parent="Mac OS X 10.5+">
+<keymap version="1" name="Orlando keymap" parent="Mac OS X 10.5+">
   <action id="ActivateBookmarksToolWindow" />
   <action id="ActivateFindToolWindow" />
   <action id="ActivateProjectToolWindow" />
@@ -7,9 +7,6 @@
   <action id="EditorEscape">
     <keyboard-shortcut first-keystroke="escape" />
     <keyboard-shortcut first-keystroke="meta k" />
-  </action>
-  <action id="ExportToTextFile">
-    <keyboard-shortcut first-keystroke="shift ctrl o" />
   </action>
   <action id="FileChooser.GotoModule" />
   <action id="FocusEditor">

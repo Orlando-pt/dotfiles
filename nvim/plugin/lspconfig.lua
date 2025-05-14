@@ -7,16 +7,10 @@ local on_attach = function(client, bufnr)
   if client.server_capabilities.documentFormattingProvider then
     vim.api.nvim_command [[augroup Format]]
     vim.api.nvim_command [[autocmd! * <buffer>]]
-    -- vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync() ]]
     vim.api.nvim_command [[augroup END]]
   end
 
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-
-  local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
-
-  --Enable completion triggered by <c-x><c-o>
-  buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 
   -- Mappings.
   local opts = { noremap = true, silent = true }
@@ -39,11 +33,6 @@ nvim_lsp.gopls.setup {
   on_attach = on_attach,
   cmd = { "gopls", "serve" },
 }
-
--- require('java').setup()
--- nvim_lsp.jdtls.setup{
---  on_attach = on_attach,
--- }
 
 nvim_lsp.pylsp.setup {
   on_attach = on_attach,
@@ -86,17 +75,20 @@ nvim_lsp.jsonls.setup {
 
 -- Diagnostic symbols in the sign column (gutter)
 local signs = { Error = " ", Warn = " ", Hint = "󰈈 ", Info = " " }
-for type, icon in pairs(signs) do
-  local hl = "DiagnosticSign" .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
-end
-
 vim.diagnostic.config({
   virtual_text = {
     prefix = '●'
   },
   update_in_insert = true,
+  signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = signs.Error,
+      [vim.diagnostic.severity.WARN] = signs.Warn,
+      [vim.diagnostic.severity.HINT] = signs.Hint,
+      [vim.diagnostic.severity.INFO] = signs.Info,
+    }
+  },
   float = {
-    source = "always", -- Or "if_many"
+    source = true, -- Or "if_many"
   },
 })
