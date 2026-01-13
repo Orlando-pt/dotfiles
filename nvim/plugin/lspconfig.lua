@@ -25,14 +25,15 @@ vim.lsp.config('ts_ls', {
   cmd = { "typescript-language-server", "--stdio" },
   --    capabilities = capabilities
 })
+vim.lsp.enable('ts_ls')
 
 vim.lsp.config('gopls', {
   on_attach = on_attach,
   cmd = { "gopls", "serve" },
 })
+vim.lsp.enable('gopls')
 
 vim.lsp.config('pylsp', {
-
   on_attach = on_attach,
   settings = {
     pylsp = {
@@ -45,6 +46,7 @@ vim.lsp.config('pylsp', {
     }
   }
 })
+vim.lsp.enable('pylsp')
 
 vim.lsp.config('lua_ls', {
   on_attach = on_attach,
@@ -62,6 +64,7 @@ vim.lsp.config('lua_ls', {
     },
   },
 })
+vim.lsp.enable('lua_ls')
 
 --Enable (broadcasting) snippet capability for completion
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -69,6 +72,7 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 vim.lsp.config('jsonls', {
   capabilities = capabilities,
 })
+vim.lsp.enable('jsonls')
 
 -- Diagnostic symbols in the sign column (gutter)
 local signs = { Error = " ", Warn = " ", Hint = "󰈈 ", Info = " " }
